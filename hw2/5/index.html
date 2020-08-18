@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hw2-5</title>
+</head>
+<body>
+<script>
+
+    /**
+     * Функция вычисления суммы двух чисел
+     * @param a
+     * @param b
+     * @returns {*}
+     */
+    function sumFunction(a, b) {
+        return (a + b);
+    }
+
+    /**
+     * Функция вычисления разности двух чисел
+     * @param a
+     * @param b
+     * @returns {number}
+     */
+    function diffFunction(a, b) {
+        return (a - b);
+    }
+
+    /**
+     * Функция вычисления деления двух чисел
+     * @param a
+     * @param b
+     * @returns {number}
+     */
+    function divisionFunction(a, b) {
+        return (a / b);
+    }
+
+    /**
+     * Функция вычисления умножения двух чисел
+     * @param a
+     * @param b
+     * @returns {number}
+     */
+    function multiplicationFunction(a, b) {
+        return (a * b);
+    }
+
+    /**
+     * Общая фукнция выполенине простых математических вычислений
+     * @param arg1
+     * @param arg2
+     * @param operation {'sum'|'diff'|'division'|'multiplication'}
+     * @returns {boolean|number|*}
+     */
+    function mathOperation(arg1, arg2, operation) {
+        switch (operation) {
+            case 'sum':
+                return sumFunction(arg1, arg2);
+            case 'diff':
+                return diffFunction(arg1, arg2);
+            case 'division':
+                return divisionFunction(arg1, arg2);
+            case 'multiplication':
+                return multiplicationFunction(arg1, arg2);
+            default:
+                return false;
+        }
+    }
+
+    console.log("Сумма: 4 + 5 = " + mathOperation(4, 5, 'sum'));
+    console.log("Разность: 4 - 5 = " + mathOperation(4, 5, 'diff'));
+    console.log("Деление: 4 / 5 = " + mathOperation(4, 5, 'division'));
+    console.log("Умножение: 4 * 5 = " + mathOperation(4, 5, 'multiplication'));
+</script>
+</body>
+</html>
