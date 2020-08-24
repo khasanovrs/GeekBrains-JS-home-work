@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hw4-1</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    /**
+     * Фукнция возвращающая разряды числа
+     * @param {number} inNumber Число в диапазоне от 0 до 999
+     * @returns {{tens: number, units: number, hundreds: number} | {}} Объект с разрядами
+     */
+    function getMathDigitsRank(inNumber = 0) {
+        let result = {
+            units: 0,
+            tens: 0,
+            hundreds: 0,
+        }
+        if (!Number.isInteger(inNumber)) {
+            console.log('Получено не число: ', inNumber);
+            return {};
+        }
+        if (inNumber < 0 || inNumber > 999) {
+            console.log('Число должно быть в диапазоне от 0 до 999: ', inNumber);
+            return {};
+        }
+        result.units = inNumber % 10;
+        if (inNumber > 10) {
+            result.tens = Math.floor(inNumber / 10) % 10;
+        }
+        if (inNumber > 100) {
+            result.hundreds = Math.floor(inNumber / 100) % 10;
+        }
+        return result;
+    }
+
+    console.log(getMathDigitsRank(0));
+    console.log(getMathDigitsRank(5));
+    console.log(getMathDigitsRank(25));
+    console.log(getMathDigitsRank(154));
+    console.log(getMathDigitsRank(760));
+    console.log(getMathDigitsRank(999));
+    console.log(getMathDigitsRank(1000));
+    console.log(getMathDigitsRank('415'));
+</script>
+</body>
+</html>
