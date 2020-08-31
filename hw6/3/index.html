@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hw6-3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-light bg-dark">
+        <div class="btn-group ml-auto">
+            <button class="btn btn-light btn-lg dropdown-toggle" type="button" data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+                Корзина
+            </button>
+            <div class="dropdown-menu dropdown-menu-right basketPanel">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Имя</th>
+                        <th scope="col">Цена</th>
+                        <th scope="col">Количество</th>
+                        <th scope="col"></th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tfoot>
+                    <tr>
+                        <th colspan="2" scope="row">Итого:</th>
+                        <td colspan="3">
+                            <span class="total">0</span>
+                            <i class="fas fa-ruble-sign"></i>
+                        </td>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+
+    <div class="row">
+        <div class="col">
+            <div><h3>Товар 1</h3></div>
+            <img src="https://placeimg.com/640/480/nature" alt="..." class="img-thumbnail">
+            <div class="text-center">
+                <span class="productPrice">120</span>
+                <i class="fas fa-ruble-sign"></i>
+            </div>
+            <div class="text-right">
+                <button type="button"
+                        class="btn btn-success mt-3 toBasketBtn"
+                        data-id="1"
+                        data-price="120"
+                        data-name="Товар 1"
+                >
+                    В корзину
+                </button>
+            </div>
+        </div>
+        <div class="col">
+            <div><h3>Товар 2</h3></div>
+            <img src="https://placeimg.com/640/480/arch" alt="..." class="img-thumbnail">
+            <div class="text-center"
+            <span class="productPrice">75</span>
+            <i class="fas fa-ruble-sign"></i>
+        </div>
+        <div class="text-right">
+            <button type="button"
+                    class="btn btn-success mt-3 toBasketBtn"
+                    data-id="2"
+                    data-price="75"
+                    data-name="Товар 2"
+            >
+                В корзину
+            </button>
+        </div>
+    </div>
+    <div class="col">
+        <div><h3>Товар 3</h3></div>
+        <img src="https://placeimg.com/640/480/tech" alt="..." class="img-thumbnail">
+        <div class="text-center">
+            <span class="productPrice">3000</span>
+            <i class="fas fa-ruble-sign"></i>
+        </div>
+        <div class="text-right">
+            <button type="button"
+                    class="btn btn-success mt-3 toBasketBtn"
+                    data-id="3"
+                    data-price="3000"
+                    data-name="Товар 3"
+            >
+                В корзину
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
