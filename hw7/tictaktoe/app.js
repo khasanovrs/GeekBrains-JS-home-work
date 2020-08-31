@@ -1,5 +1,6 @@
 "use strict";
 
-let ticTakToe = new TicTakToe();
-
-ticTakToe.init();
+window.onload = () => {
+    let ticTakToe = new TicTakToe();
+    ticTakToe.init();
+};
